@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Mini hub - Page two
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ],
+    href: "/templates/mini-hub",
+    text: "Main page"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Review your draft
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+         Add your product or service to the service catalogue
+        </span>
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/page-1",
+            text: "Create your draft"
+          },
+          {
+            href: "/page-2",
+            text: "Review your draft"
+            ,
+            current: "true"
+          },
+          {
+            href: "/page-3",
+            text: "Create the page"
+          },{
+            href: "/page-4",
+            text: "Publish the page"
+          }
+        ]
+      }) }}
+
+      <p>
+ <p>
+       Review the draft with relevant stakeholders, including:
+<li>the service owner</li>
+<li>the comms 'partner', if appropriate</li>
+<li>any other stakeholders e.g. key members of the service-owning team</li>
+<li>someone from the web team, if they want to be involved</li>
+<p>Ideally, do this on a call, not by exchange of email. It's best to have a rich discussion about the page content.</p>
+<p>If you want, you can use the 'Review comments' section in the confluence template to track review comments, whether you receive them on a call or by e-mail.</p>
+<p>Update the draft according to the feedback.</p>
+      </p>
+
+      <p>
+        [Visit the
+        <a href="https://service-manual.nhs.uk">NHS digital service manual</a>
+        for guidance and examples.]
+      </p>
+
+      {{ pagination({
+        "previousUrl": "/templates/mini-hub",
+        "previousPage": "Main page",
+        "nextUrl": "/page-3",
+        "nextPage": "Create the page"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

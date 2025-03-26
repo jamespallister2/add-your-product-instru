@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+ Create or update a service catalogue entry
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Add your product to the service catalogue
+      </h1>
+
+<p>The NHS England digital service catalogue is intended to be a single source of truth about NHS England's national digital services and programmes.</p>
+<p>It hosts up-to-date information on digital products to make it easier for internal and external teams to integrate with and use them.</P>
+ 
+<p>Use this guidance to help you:</p>
+
+      <ul>
+        <li>add a new product or service to the NHS service catalogue</li>
+        <li>update an existing page</li>
+      </ul>
+
+      <h2 class="nhsuk-heading-m">Before you start</h2>
+
+      <p>The service catalogue is for services or programmes that are:
+<li>national in scale</li>
+<li>owned by NHS England</li>
+<li>something to do with digital capability and/or digital transformation</li></p>
+
+<p>To complete this process you will need to have the following:</p>
+<li>a good understanding of what your service does</li>
+<li>information that allows you to draft a service page</li>
+<li>time with the product owner or whomever can say the information is correct</li></p>
+
+      <a href="/page-1" class="nhsuk-button">
+        Start now
+      </a>
+
+    </div>
+
+  </div>
+{% endblock %}

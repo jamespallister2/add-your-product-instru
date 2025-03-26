@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+ Create or update a service catalogue entry
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/start-page",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+Create your draft        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+Add your product or service to the service catalogue </span>
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/page-1",
+            text: "Create your draft",
+            current: "true"
+          },
+          {
+            href: "/page-2",
+            text: "Review your draft"
+          },
+          {
+            href: "/page-3",
+            text: "Create the page"
+          },{
+            href: "/page-4",
+            text: "Publish the page"
+          }
+        ]
+      }) }}
+
+      <p>
+<p>       We have developed a template to help people create a draft service catalogue page. </P>
+<p>Here's how to use it:</P>
+<li>Make a copy of the Service page process checklist.</li>
+<li>Use your copy to guide you through the process.</li>
+<p></P>
+<p>For more guidance on how to write for the NHS:</p>
+
+<li>https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/our-style-guidelines</li>
+<li>https://service-manual.nhs.uk/content (as a secondary guide)</li>
+<li>API content style guide </li>
+<li>Guide to naming services link to confluence </li>
+      </p>
+
+      <p>
+        [Visit the
+        <a href="https://service-manual.nhs.uk">NHS digital service manual</a>
+        for guidance and examples.]
+      </p>
+
+      {{ pagination({
+        "nextUrl": "/page-2",
+        "nextPage": "Review your draft"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

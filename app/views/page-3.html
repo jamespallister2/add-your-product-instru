@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Mini hub - Page three
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ],
+    href: "/templates/mini-hub",
+    text: "Main page"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+       Create the page
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+Add your product or service to the service catalogue        </span>
+      </h1>
+{{ contentsList({
+        items: [
+          {
+            href: "/page-1",
+            text: "Create your draft"
+          },
+          {
+            href: "/page-2",
+            text: "Review your draft"
+           
+          },
+          {
+            href: "/page-3",
+            text: "Create the page" ,
+            current: "true"
+          },{
+            href: "/page-4",
+            text: "Publish the page"
+          }
+        ]
+      }) }}
+      <p>Once your draft is approved you can create the page in the CMS</p>
+<p>The CMS is called Bloomreach. There is guidance on Confluence on how to use Bloomreach CMS.</p>
+<p>You may need to check with the web team or content and catalogues team for guidance on how to correctly tag your page.</p>
+<p>You should now be able to preview the page in the Service catalogue.</p> <p>Do not publish the page yet.</p>
+      </p>
+
+    
+
+      {{ pagination({
+        "previousUrl": "/page-2",
+        "previousPage": "Review your draft"
+      }) }}
+         {{ pagination({
+        "previousUrl": "/page-4",
+        "previousPage": "Publish the page"
+      }) }}
+
+
+    </div>
+  </div>
+{% endblock %}

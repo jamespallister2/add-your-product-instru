@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Mini hub - Page three
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+    ],
+    href: "/templates/mini-hub",
+    text: "Main page"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+       Publish the page
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+Add your product or service to the service catalogue        </span>
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/page-1",
+            text: "Create your draft"
+
+          },
+          {
+            href: "/page-2",
+            text: "Review your draft"
+          },
+          {
+            href: "/page-3",
+            text: "Create the page"
+          },{
+            href: "/page-4",
+            text: "Publish the page",
+            current: "true"
+          }
+        ]
+      }) }}
+      <p>
+       Now you have a tagged, edited and reviewed page, you are almost ready to publish.</p>
+<p>Once the page has had the final review by the product owner or key responsible person, you can then send it to the service catalogue product owner (Dr Jenna Hartley-Smith) for review.</P>
+<p>Once the page has been signed off by the service catalogue product owner it can be published.</p>
+<p>Now the page is live, it will need to be kept up to date and maintained. </P>
+      
+      {{ pagination({
+        "previousUrl": "/templates/mini-hub/page-2",
+        "previousPage": "Page two"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}
